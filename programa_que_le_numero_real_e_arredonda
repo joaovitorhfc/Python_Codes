@@ -1,0 +1,3 @@
+import math
+numero = float(input("Insira um número aqui: "))
+print ('O valor digitado foi {} e seu inteiro é {}'.format(numero,math.trunc(numero)))
