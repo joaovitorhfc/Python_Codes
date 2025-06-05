@@ -1,0 +1,4 @@
+co = float(input('Insira aqui o valor do cateto oposto: '))
+ca = float(input('Insira o valor do cateto adjacente: '))
+hi = (co ** 2  + ca ** 2) ** (1/2)
+print ('O cálculo do cateto oposto {:.2f} com o cateto adjacente {:.2f} vale {:.3f}'.format(co,ca,hi))
