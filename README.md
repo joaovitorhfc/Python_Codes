@@ -1,3 +1,12 @@
-# Python arquives
+## Python codes
 
-Here are some archives that i'm training web developing in Python
+Here are some personal Python codes that i've developed using Vscode
+
+## Plataform used
+<img
+align="left" 
+alt="Python" 
+title="Python"
+width="30px" 
+style="padding-right: 10px;" 
+src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
