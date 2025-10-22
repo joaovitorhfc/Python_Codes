@@ -1,0 +1,28 @@
+precos = {
+    "hamburguer": 12.00,
+    "batata frita": 7.00,
+    "refrigerante": 5.00
+}
+
+print("Cardápio:")
+for item, preco in precos.items():
+    print(f"- {item.title()} = R$ {preco:.2f}")
+
+pedido = input("\nO que você quer pedir? (ex: hamburguer, batata frita e refrigerante): ").lower()
+
+pedido = pedido.replace(" e ", ",") 
+itens = [p.strip() for p in pedido.split(",") if p.strip()]
+
+total_geral = 0
+
+
+for item in itens:
+    if item in precos:
+        qtd = int(input(f"Quantos(as) {item}s você deseja? "))
+        subtotal = qtd * precos[item]
+        total_geral += subtotal
+        print(f"Subtotal de {item.title()}: R$ {subtotal:.2f}")
+    else:
+        print(f"Desculpe, '{item}' não está no cardápio.")
+
+print(f"\n🧾 Total do pedido: R$ {total_geral:.2f}")
