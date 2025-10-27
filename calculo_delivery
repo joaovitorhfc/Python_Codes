@@ -1,0 +1,38 @@
+limite_distancia_1 = 5.0
+limite_distancia_2 = 10.0  
+taxa_chuva = 2
+
+entrada_distancia = input("Qual a distancia do seu percurso (Em Km)? ")
+distancia = float(entrada_distancia)
+
+pergunta_chuva = input("Está chovendo? (Digite S para Sim ou N para Não) ").strip().upper()
+
+valor_base = 0.0
+
+if distancia <= limite_distancia_1:
+    valor_base = 5.00
+elif distancia <= limite_distancia_2:
+    valor_base = 8.00
+else:
+    valor_base = 10.00
+
+valor_final = valor_base
+adicional_chuva = 0.00
+
+if pergunta_chuva.startswith("S"):
+    valor_final += taxa_chuva
+    adicional_chuva = taxa_chuva
+
+def formatar_moeda(valor):
+    return f"{valor:.2f}".replace('.', ',')
+
+print("-" * 40)
+print(f"Distância do percurso: {distancia} Km")
+print(f"Valor base da entrega: R$ {formatar_moeda(valor_base)}")
+
+if adicional_chuva > 0:
+    print(f"Taxa de chuva aplicada: R$ {formatar_moeda(adicional_chuva)}")
+
+print("-" * 40)
+print(f"VALOR FINAL DA ENTREGA: R$ {formatar_moeda(valor_final)}")
+print("-" * 40)
